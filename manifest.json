@@ -1,15 +1,23 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
-  "name": "Enjin Notification ",
-  "description": "This extension will analyze a page using GTmetrix",
-  "version": "1.0",
+  "name": "Enjin Notifications",
+  "description": "This extension will add Chrome notifications to your Enjin notifications.",
+  "version": "1.0","content_scripts": [
+    {
+      "matches": ["*://*.enjin.com/*"],
+      "js": ["index.js"]
+    }
+  ],
 
   "browser_action": {
-   "default_icon": "vigil_banner.png",
-   "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "vigil_banner.png"
   },
+
   "permissions": [
-   "browser"
+   "activeTab",
+   "notifications"
    ]
+   
 }
