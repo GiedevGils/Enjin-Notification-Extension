@@ -1,10 +1,52 @@
 <!doctype html>
 <html>
-  <head>
-    <title>GTmetrix Analyzer</title>
-    <script src="index.js"></script>
-  </head>
-  <body>
-    <h1>Notitester</h1>
-  </body>
+
+<head>
+  <title>Enjin Notifications</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+</head>
+<style>
+  h1 {
+    color: #596FBC;
+    font-size: 2em;
+  }
+
+  body {
+    width: 275px;
+  }
+
+  .inline {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  img.logo {
+    margin-left: 10%;
+  }
+
+  hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+</style>
+
+<body>
+  <div class="inline">
+    <h1>
+      <u>Enjin Notifications</u>
+    </h1>
+    <img src="enjin_logo.png" style="width: 35px" class="logo">
+  </div>
+  <p>This application shows Enjin notifications as Chrome popups, in the bottom left of your screen.</p>
+  <hr>
+  <p>Please note that this extension is not 100% complete yet, and is a side project of mine. Development on this extension will be sporradic.</p>
+  <hr>
+  <p>For the code, please check out the <a href="https://github.com/GiedevGils/enjin-notification-extension" target="_blank" ><i class="devicon-github-plain"></i> Github repository</a> for this project.  Any issues can also be reported there.</p>
+</body>
+
 </html>

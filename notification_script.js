@@ -3,8 +3,6 @@ if (Notification.permission !== "granted") {
     Notification.requestPermission();
 }
 
-var i = 0;
-
 function chromeNotify(title, icon_img, body_msg, link) {
     if (!Notification) {
         alert('Desktop notifications not available in your browser. Try Chromium.');
@@ -25,7 +23,7 @@ function chromeNotify(title, icon_img, body_msg, link) {
         };
 
         setTimeout(function () {
-            notification.close()
+            notification.close();
         }, 5000);
     }
 }
@@ -37,9 +35,9 @@ Enjin_Core.Notifications.addGrowl = function (data) {
         return;
     }
 
-    //Google Chrome Notification - Made By rojo8399 - Version 1.2
+    // Google Chrome Notification - Made By rojo8399 - Version 1.2
 
-    //fix avatar size
+    // Fix avatar size
     var avatar_large = (data.avatar).replace("small", "avatar");
 
     var Notify_title = data.growl_type;
@@ -51,14 +49,9 @@ Enjin_Core.Notifications.addGrowl = function (data) {
     if (data.growl_type == '') {
         null;
 
-    // Logs used for debugging
-    // console.log("Type: " + data.growl_type);
-    // console.log("Class: " + data.growl_class);
-    // console.log("Text: " + data.growl_text);
-    // console.log("Game: " + data.growl_game);
-
     } else if (data.growl_type == undefined) {
 
+        // Wall posts are categoried as "undefined" - This makes it a "Wall Post:"
         Notify_title = "Wall post:"
         chromeNotify(Notify_title, avatar_large, data.growl_text, data.url);
 
@@ -66,11 +59,6 @@ Enjin_Core.Notifications.addGrowl = function (data) {
     
     else {
         chromeNotify(Notify_title, avatar_large, data.growl_text, data.url);
-        // console.log('Notification Launched');
-        // console.log("Type: " + data.growl_type);
-        // console.log("Class: " + data.growl_class);
-        // console.log("Text: " + data.growl_text);
-        // console.log("Game: " + data.growl_game);
     }
 
 
@@ -91,12 +79,13 @@ Enjin_Core.Notifications.addGrowl = function (data) {
     // Update the margin top - 54 + 52 * TOTAL_ITEMS
     container.css('margin-top', -(52 * container.children().length - 12) + 'px');
 
-    //
+    
     block.mouseenter(function () {
         $(this).addClass('over');
     }).mouseleave(function () {
         $(this).removeClass('over');
     });
+
     setTimeout(function () {
         if (false === block.hasClass('over')) {
             block.slideUp(300, function () {
