@@ -44,19 +44,33 @@ Enjin_Core.Notifications.addGrowl = function (data) {
 
     var Notify_title = data.growl_type;
 
+    
+
+
+    // If the type is empty or undefined, do not pop a notification
+    if (data.growl_type == '') {
+        null;
+
     // Logs used for debugging
     // console.log("Type: " + data.growl_type);
     // console.log("Class: " + data.growl_class);
     // console.log("Text: " + data.growl_text);
     // console.log("Game: " + data.growl_game);
 
+    } else if (data.growl_type == undefined) {
 
-    // If the type is empty or undefined, do not pop a notification
-    if (data.growl_type == '' || data.growl_type == undefined) {
-        null
-    } else {
+        Notify_title = "Wall post:"
+        chromeNotify(Notify_title, avatar_large, data.growl_text, data.url);
+
+    } 
+    
+    else {
         chromeNotify(Notify_title, avatar_large, data.growl_text, data.url);
         // console.log('Notification Launched');
+        // console.log("Type: " + data.growl_type);
+        // console.log("Class: " + data.growl_class);
+        // console.log("Text: " + data.growl_text);
+        // console.log("Game: " + data.growl_game);
     }
 
 
