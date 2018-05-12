@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Enjin Notifications",
   "description": "This extension will add Chrome notifications to your Enjin notifications.",
-  "version": "0.2.3",
+  "version": "0.4.0",
   "content_scripts": [
     {
       "matches": ["*://*.enjin.com/*"],
@@ -25,8 +25,8 @@
    ],
 
    "background": {
-     "scripts": ["index.js"],
-     "persistent": false
+     "scripts": ["background_tab_checker.js"],
+     "persistent": true
    }
    
 }
