@@ -14,9 +14,9 @@ The black bar you can see on both images is the URL of the source of the notific
 
 Some known issues:
 
-- Multiple open Enjin tabs logged in on the same account will mean that you will get multiple pop-ups on the same notification.
+- Multiple open Enjin tabs logged in on the same account will mean that you will get multiple pop-ups on the same notification. This has been fixed in version 0.4, but can still occur if you have the right circumstances. 
 - Notifications will not appear if you are playing something on fullscreen. 
 - The popups do not appear if you are on a HTTP site. The site needs to be HTTPS for the extension to work.
 
-## Credits
+## Credit
 I do want to credit [Enjin user ROJO](https://www.enjin.com/profile/rojo8399) for making [this post](https://www.enjin.com/forums/m/10826/viewthread/27087168-free-code-chrome-notifications/post/117997305#p117997305) back in May 2016. He gave me the base for this code, and I only altered it a little bit to transform it into a Chrome extension. 
