@@ -12,7 +12,7 @@ chrome.runtime.sendMessage(
             var script = document.createElement('script');
 
             // Make the source of that script tag the notification file
-            script.src = chrome.extension.getURL('notification_script.js');
+            script.src = chrome.extension.getURL('../scripts/notification_script.js');
 
             // Add the script tag to the end of the Head
             (document.head).appendChild(script);
