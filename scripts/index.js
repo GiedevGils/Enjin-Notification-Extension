@@ -1,14 +1,13 @@
-// Make a console log to make sure the extension is running
-console.log('Notification Extension active!');
-
 chrome.runtime.sendMessage(
     // Send a message to the background script, sending a question. the URL of the webpage and the tabID
     { msg: "Am I the first tab?", url: window.location.href },
     function (response) {
 
-        console.log(response);
-
         if (response.result == true) {
+
+            // Make a console log to make sure the extension is running
+            console.log('Notification Extension active!');
+
             // Create an HTML Script tag
             var script = document.createElement('script');
 
