@@ -1,4 +1,3 @@
-
 if (Notification.permission !== "granted") {
     Notification.requestPermission();
 }
@@ -42,7 +41,7 @@ Enjin_Core.Notifications.addGrowl = function (data) {
 
     var Notify_title = data.growl_type;
 
-    
+
 
 
     // If the type is empty or undefined, do not pop a notification
@@ -55,9 +54,7 @@ Enjin_Core.Notifications.addGrowl = function (data) {
         Notify_title = "Wall post:"
         chromeNotify(Notify_title, avatar_large, data.growl_text, data.url);
 
-    } 
-    
-    else {
+    } else {
         chromeNotify(Notify_title, avatar_large, data.growl_text, data.url);
     }
 
@@ -79,7 +76,7 @@ Enjin_Core.Notifications.addGrowl = function (data) {
     // Update the margin top - 54 + 52 * TOTAL_ITEMS
     container.css('margin-top', -(52 * container.children().length - 12) + 'px');
 
-    
+
     block.mouseenter(function () {
         $(this).addClass('over');
     }).mouseleave(function () {
