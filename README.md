@@ -26,7 +26,7 @@ Some known issues:
 
 - Multiple open Enjin tabs logged in on the same account will mean that you will get multiple pop-ups on the same notification. This has been fixed in version 0.4, but can still appear if one tab is dragged in front of the other and then refreshed. 
 - ~~Notifications will not appear if you are playing something on fullscreen.~~ Notifications will now appear in full screen too, [due to Chrome stepping over to OS native notifications in Windows 10](https://chromium-review.googlesource.com/c/chromium/src/+/955244 "Chromium Commit").
-- The popups do not appear if you are on a HTTP site. The site needs to be HTTPS for the extension to work.
+- The popups do not appear if you are on a HTTP site. The site needs to be HTTPS for the extension to work. The owner of this site can enable this in the `Admin Settings` > `Settings` > `Main Settings` > `HTTPS / SSL`. There should be a button to enable it here.
 
 Potential Future Features:
 
