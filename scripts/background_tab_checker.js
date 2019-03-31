@@ -12,7 +12,7 @@ function isEnjinUrl(url) {
 }
 
 function isThisTabTheFirstEnjinTab(tabIds, senderId) {
-  console.log(tabIds[0] + " against " + senderId);
+  console.log("ID " + tabIds[0] + " against ID " + senderId);
 
 
   // If the first ID in the array is the ID that the foreground sends along, return true
@@ -61,4 +61,4 @@ chrome.runtime.onMessage.addListener(
     }
     return true;
   });
-console.log("this is background.js reporting for duty");
+console.log("This is background.js reporting for duty!");
