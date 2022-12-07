@@ -1,3 +1,5 @@
+functionality does not appear to work anymore and I do not feel the need to update it. Archived
+
 # Enjin Notifications
 ### Let your Enjin browser notifications appear on your desktop
 
